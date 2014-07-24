@@ -4,10 +4,10 @@ def coupon():
 	#format
 	textcode="MQ-xxxx xxxx xx"
 
-	irand = randrange(10000000,99999999)
+	
 	timee = str(int(time.time()))
-	textcode ="MQ-"+timee
-
-	print textcode
+	textcode ="MQ-%.7s"%timee
+	for i in range(100,350):
+		print textcode+str(i)
 	return textcode
 coupon()
