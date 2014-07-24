@@ -14,6 +14,7 @@ and open the template in the editor.
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <body>
         <div id="button"></div>
+        
         <div id="javascript"></div>
     </body>
     <script id="json-template" type="text/x-handlebars-template">
@@ -27,10 +28,10 @@ and open the template in the editor.
     </script>
     
     <script type="text/javascript">
-        var a=["⭑⭑⭑","⭑⭑⭑","⭑⭑⭑"];
+        var a=["Score⭑⭑⭑","Score⭑⭑⭑","Score⭑⭑⭑"];
         for(i = 0;i<3;i++){
             var div=document.getElementById("button");
-            div.innerHTML+="<button id='btn' class='myButtongreen'>Score<a id=star"+i+"></a></button>";
+            div.innerHTML+="<a id='star"+i+"' href='some_url' class='likeabutton'>"+a[i]+"</a>";
             var star=document.getElementById("star"+i+"");
             star.innerHTML=a[i];
         }
@@ -74,5 +75,18 @@ and open the template in the editor.
         border-radius: 6px;
         font-size: 14px;
     }
+    .likeabutton {
+        text-decoration: none; font: menu;
+        display: inline-block; padding: 2px 8px;
+        background: ButtonFace; color: ButtonText;
+        background-color: green;
+        border-radius: 6px;
+        font-size: 14px;
+        border-style: solid; border-width: 2px;
+        border-color: ButtonHighlight ButtonShadow ButtonShadow ButtonHighlight;
+    }
+    .likeabutton:active {
+        border-color: ButtonShadow ButtonHighlight ButtonHighlight ButtonShadow;
+    }   
     </style>
 </html>
